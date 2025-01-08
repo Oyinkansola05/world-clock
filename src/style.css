@@ -1,7 +1,54 @@
 h1 {
-    text-align: center;
+  text-align: center;
 }
 footer {
-    text-align: center;
+  text-align: center;
+    color: rgba(0, 0, 0, 0.7);
 
+}
+body {
+  background: #f9f7fe;
+  font-family: sans-serif;
+}
+.container {
+  background: white;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding: 40px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+h2 {
+    margin-top: -4px;
+    font-size: 28px;
+    font-weight: bold;
+}
+select {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+.city {
+display: flex;
+justify-content: space-between;
+margin-top: 25px;
+padding-bottom: 20px;
+border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+}
+.city:last-child {
+    border: none;
+}
+.date {
+    margin-top: -10px;
+    color: rgba(0, 0, 0, 0.7);
+}
+.time {
+    font-size: 45px;
+font-weight: bold;
+}
+.time small {
+    font-size: 19px;
+    vertical-align: middle;
 }
