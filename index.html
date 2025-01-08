@@ -3,35 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
     <link rel="stylesheet" href="src/style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.46/moment-timezone-with-data-1970-2030.min.js"></script>
+    <title>Document</title>
   </head>
   <body>
     <div class="container">
       <h1>World Clock</h1>
       <select>
         <option value="">Select a city...</option>
-        <option value="Paris">Paris</option>
-        <option value="Los Angeles">Los Angeles</option>
         <option value="New York">New York</option>
+
+        <option value="Paris">Paris</option>
+        <option value="Pretoria">Los Angeles</option>
       </select>
-      <div class="city" id="#lagos">
+      <div class="city" id="lagos">
         <div>
           <h2>Lagos</h2>
           <div class="date">January 7th 2025</div>
         </div>
         <div class="time">15:50:20 <small>PM</small></div>
       </div>
-      <div class="city">
+      <div class="city" id="tokyo">
         <div>
-          <h2>Pretoria</h2>
+          <h2>Tokyo</h2>
           <div class="date">January 7th 2025</div>
         </div>
         <div class="time">15:50:20 <small>PM</small></div>
       </div>
-      <div class="city">
+      <div class="city" id="accra">
         <div>
           <h2>Accra</h2>
           <div class="date">January 7th 2025</div>
