@@ -5,7 +5,7 @@ function displayTime() {
   let lagosDate = moment().tz("Africa/Lagos").format("MMMM Do YYYY");
   let lagosTime = moment()
     .tz("Africa/Lagos")
-    .format("H:mm:ss [<small>]A[</small>]");
+    .format("HH:mm:ss [<small>]A[</small>]");
   lagosDateElement.innerHTML = `${lagosDate}`;
   lagosTimeElement.innerHTML = `${lagosTime}`;
 
@@ -15,7 +15,7 @@ function displayTime() {
   let tokyoDate = moment().tz("Asia/Tokyo").format("MMMM Do YYYY");
   let tokyoTime = moment()
     .tz("Asia/Tokyo")
-    .format("H:mm:ss [<small>]A[</small>]");
+    .format("HH:mm:ss [<small>]A[</small>]");
   tokyoDateElement.innerHTML = `${tokyoDate}`;
   tokyoTimeElement.innerHTML = `${tokyoTime}`;
 
@@ -25,9 +25,29 @@ function displayTime() {
   let accraDate = moment().tz("Africa/Accra").format("MMMM Do YYYY");
   let accraTime = moment()
     .tz("Africa/Accra")
-    .format("H:mm:ss [<small>]A[</small>]");
+    .format("HH:mm:ss [<small>]A[</small>]");
   accraDateElement.innerHTML = `${accraDate}`;
   accraTimeElement.innerHTML = `${accraTime}`;
 }
+function displaySelectedCity(event) {
+  let cityTimeZone = event.target.value;
+  let cityTime = moment()
+    .tz(cityTimeZone)
+    .format("HH:mm:ss [<small>]A[</small]");
+  let cityDate = moment().tz(cityTimeZone).format("MMMM Do YYYY");
+  let cityName = cityTimeZone.replace("_", " ").split("/")[1];
+  let cityElement = document.querySelector("#city-container");
+  cityElement.innerHTML = ` <div class="city">
+          <div>
+            <h2>${cityName}</h2>
+            <div class="date">${cityDate}</div>
+          </div>
+          <div class="time">${cityTime}</div>
+        </div>`;
+}
+
 displayTime();
-setInterval(displayTime, 1000)
+setInterval(displayTime, 1000);
+
+let citiesElement = document.querySelector("#cities");
+citiesElement.addEventListener("change", displaySelectedCity);
