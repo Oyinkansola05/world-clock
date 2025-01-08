@@ -31,6 +31,9 @@ function displayTime() {
 }
 function displaySelectedCity(event) {
   let cityTimeZone = event.target.value;
+  if (cityTimeZone === "current") {
+    cityTimeZone = moment.tz.guess();
+  }
   let cityTime = moment()
     .tz(cityTimeZone)
     .format("HH:mm:ss [<small>]A[</small]");
