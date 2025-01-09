@@ -1,13 +1,5 @@
-h1 {
-  text-align: center;
-}
-footer {
-  text-align: center;
-    color: rgba(0, 0, 0, 0.7);
-
-}
 body {
-  background: #f9f7fe;
+  background: #f2f3f4;
   font-family: sans-serif;
 }
 .container {
@@ -19,36 +11,48 @@ body {
   padding: 40px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+h1 {
+  text-align: center;
+}
 h2 {
-    margin-top: -4px;
-    font-size: 28px;
-    font-weight: bold;
+  margin-top: -4px;
+  font-size: 28px;
+  font-weight: bold;
 }
 select {
-    width: 100%;
-    padding: 8px;
-    font-size: 16px;
-    border-radius: 4px;
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  background: #f2f3f4;
+
 }
 .city {
-display: flex;
-justify-content: space-between;
-margin-top: 25px;
-padding-bottom: 20px;
-border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
 }
 .city:last-child {
-    border: none;
+  border: none;
 }
 .date {
-    margin-top: -10px;
-    color: rgba(0, 0, 0, 0.7);
+  margin-top: -10px;
+  color: rgba(0, 0, 0, 0.7);
 }
 .time {
-    font-size: 45px;
-font-weight: bold;
+  font-size: 45px;
+  font-weight: bold;
+
 }
 .time small {
-    font-size: 19px;
-    vertical-align: middle;
+  font-size: 19px;
+  vertical-align: middle;
+  margin-left: -7px;
+}
+footer {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 14px;
 }

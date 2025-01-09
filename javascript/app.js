@@ -27,7 +27,8 @@ function displayTime() {
     .tz("Africa/Accra")
     .format("HH:mm:ss [<small>]A[</small>]");
   accraDateElement.innerHTML = `${accraDate}`;
-  accraTimeElement.innerHTML = `${accraTime}`;
+  accraTimeElement.innerHTML = `${accraTime}
+  `;
 }
 function displaySelectedCity(event) {
   let cityTimeZone = event.target.value;
@@ -45,8 +46,10 @@ function displaySelectedCity(event) {
             <h2>${cityName}</h2>
             <div class="date">${cityDate}</div>
           </div>
-          <div class="time">${cityTime}</div>
-        </div>`;
+          <div class="time">${cityTime}></div>
+        </div>
+        <br/>
+      <a href="index.html">Go back</a>`;
 }
 
 displayTime();
